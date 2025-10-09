@@ -5,15 +5,19 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const successPhotos = [
-    { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68d13cf9dba1da4cde959c5c/44fab2d32_Screenshot2025-09-22at114008pm.png", alt: "Young male student celebrating with P plates" },
-    { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68d13cf9dba1da4cde959c5c/7f38560bf_Screenshot2025-09-22at114016pm.png", alt: "Female student celebrating with license" },
-    { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68d13cf9dba1da4cde959c5c/927aafb68_Screenshot2025-09-22at114023pm.png", alt: "Male student showing peace sign after passing test" },
-    { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68d13cf9dba1da4cde959c5c/9570ded27_Screenshot2025-09-22at114030pm.png", alt: "Female student with green license certificate" },
-    { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68d13cf9dba1da4cde959c5c/8007d1322_Screenshot2025-09-22at114036pm.png", alt: "Female student with P plates outdoors" },
-    { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68d13cf9dba1da4cde959c5c/435ad8ccb_Screenshot2025-09-22at114042pm.png", alt: "Male student standing next to driving school car" },
-    { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68d13cf9dba1da4cde959c5c/9cf66d793_Screenshot2025-09-22at114050pm.png", alt: "Male student giving thumbs up after passing" },
-    { src: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68d13cf9dba1da4cde959c5c/30b1cc5cf_photo.jpg", alt: "Male student in Adidas shirt showing thumbs up with license" }
-];
+    { src: "/images/success-1.jpeg", alt: "success!" },
+    { src: "/images/success-2.jpeg", alt: "success!" },
+    { src: "/images/success-3.jpeg", alt: "success!" },
+    { src: "/images/success-4.jpeg", alt: "success!" },
+    { src: "/images/success-5.jpeg", alt: "success!" },
+    { src: "/images/success-6.jpeg", alt: "success!" },
+    { src: "/images/success-7.jpeg", alt: "success!" },
+    { src: "/images/success-8.jpeg", alt: "success!" },
+    { src: "/images/success-9.jpeg", alt: "success!" },
+    { src: "/images/success-10.jpeg", alt: "success!" },
+    { src: "/images/success-11.jpeg", alt: "success!" },
+    { src: "/images/success-12.jpeg", alt: "success!" }
+]
 
 const SuccessStoriesSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
