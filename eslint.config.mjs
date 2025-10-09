@@ -1,4 +1,4 @@
-const nextPlugin = require("@next/eslint-plugin-next");
+import nextPlugin from "@next/eslint-plugin-next"; // Changed to modern import
 
 /** @type {import('eslint').Linter.FlatConfig[]} */
 const config = [
@@ -10,9 +10,10 @@ const config = [
     rules: {
       ...nextPlugin.configs.recommended.rules,
       ...nextPlugin.configs["core-web-vitals"].rules,
-      "react/no-unescaped-entities": "warn",
+      // This is the important line that allows deployment
+      "react/no-unescaped-entities": "warn", 
     },
   },
 ];
 
-module.exports = config;
+export default config; // Changed to modern export
