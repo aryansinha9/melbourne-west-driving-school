@@ -1,6 +1,5 @@
 import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Car, Award, Globe, BookOpen, ShieldCheck, Facebook } from 'lucide-react';
+import { Car, ShieldCheck, Globe, Users, BookOpen, Award, Facebook, Instagram } from 'lucide-react';
 
 const services = [
   {
@@ -13,6 +12,12 @@ const services = [
     icon: Award,
     title: "4 Years+ Experienced Driving Instructor",
     description: "Professional instruction from Waseem, who has been teaching since 2018.",
+    color: "bg-red-100 text-red-600"
+  },
+  {
+    icon: Users,
+    title: "Male and Female Instructors Available",
+    description: "We have both male and female instructors available to ensure every learner feels comfortable and supported.",
     color: "bg-red-100 text-red-600"
   },
   {
@@ -55,17 +60,35 @@ const ServicesSection = () => (
         ))}
       </div>
 
-      {/* Facebook Section */}
       <div className="mt-16 text-center">
         <div className="bg-blue-600 text-white rounded-2xl p-8">
           <Facebook className="w-12 h-12 mx-auto mb-4" />
           <h3 className="text-2xl font-bold mb-4">We are on Facebook!</h3>
           <p className="text-lg mb-6">Follow us for updates, tips, and success stories from our students.</p>
-          <Button className="bg-white text-blue-600 hover:bg-gray-100 rounded-full px-6 py-3 font-semibold">
-            <a href="https://www.facebook.com/meldrivingschool" target="_blank" rel="noopener noreferrer">
-              Visit Melbourne West Driving School Facebook Page
-            </a>
-          </Button>
+          <a 
+            href="https://www.facebook.com/meldrivingschool" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-block w-full sm:w-auto bg-white text-blue-600 hover:bg-gray-100 rounded-full px-6 py-3 font-semibold transition-colors"
+          >
+            <span className="break-words">Visit Melbourne West Driving School Facebook Page</span>
+          </a>
+        </div>
+      </div>
+
+      <div className="mt-8 text-center">
+        <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 text-white rounded-2xl p-8">
+          <Instagram className="w-12 h-12 mx-auto mb-4" />
+          <h3 className="text-2xl font-bold mb-4">We are on Instagram!</h3>
+          <p className="text-lg mb-6">Follow us for daily driving tips, student success stories, and behind-the-scenes moments.</p>
+          <a 
+            href="https://www.instagram.com/melbournewestdrivingschool/?hl=en" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-block w-full sm:w-auto bg-white text-purple-600 hover:bg-gray-100 rounded-full px-6 py-3 font-semibold transition-colors"
+          >
+            <span className="break-words">Visit Melbourne West Driving School Instagram Page</span>
+          </a>
         </div>
       </div>
     </div>

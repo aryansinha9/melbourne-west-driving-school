@@ -1,9 +1,8 @@
 import React from 'react';
-import Image from 'next/image';
+import Image from 'next/image'; // <-- Use Next.js Image component
 import { Button } from '@/components/ui/button';
 import { Phone } from 'lucide-react';
 
-// Hero Section Component
 const HeroSection = () => (
   <section className="bg-white">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
@@ -30,8 +29,8 @@ const HeroSection = () => (
           <Image
             src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68d13cf9dba1da4cde959c5c/c1aca34fb_GeneratedImageSeptember222025-10_45PM-Photoroom.png"
             alt="Melbourne West Driving School car outline"
-            width={800}
-            height={600}
+            width={800} // <-- Add width for optimization
+            height={600} // <-- Add height for optimization
             className="w-full max-w-xl rounded-2xl"
           />
         </div>

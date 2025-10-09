@@ -120,7 +120,7 @@ export default function PricesPage() {
             </li>
             <li className="flex items-start">
               <span className="font-bold text-red-600 mr-3 text-lg">•</span>
-              <span>We cover Drive test in Werribee, Werribee, Deerpark</span>
+              <span>We cover Drive test in Werribee & Deerpark</span>
             </li>
             <li className="flex items-start">
               <span className="font-bold text-red-600 mr-3 text-lg">•</span>
