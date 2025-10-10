@@ -9,7 +9,7 @@ const AboutUsSection = () => (
           <div className="w-24 h-1 bg-red-600 mt-2 mx-auto"></div>
         </h2>
         <p className="mt-6 text-lg text-gray-600 text-left">
-          Welcome to Melbourne West Driving School. Hi, we’re <strong>Waseem Khaja</strong> and <strong>Samina Faruqi</strong>. Together, we’re passionate about helping learners become confident, responsible, and safe drivers. Waseem began his journey as a driving instructor in 2018, driven by his love for teaching and dedication to road safety. Samina soon joined him, bringing a calm, patient, and understanding approach that helps every learner feel comfortable and supported.
+          Welcome to Melbourne West Driving School. Hi, we’re <strong>Waseem Khaja</strong> and <strong>Samina Farooqi</strong>. Together, we’re passionate about helping learners become confident, responsible, and safe drivers. Waseem began his journey as a driving instructor in 2018, driven by his love for teaching and dedication to road safety. Samina soon joined him, bringing a calm, patient, and understanding approach that helps every learner feel comfortable and supported.
         </p>
         <p className="mt-4 text-lg text-gray-600 text-left">
           We are both committed to teaching the next generation of drivers how to understand the road rules and make smart, safe decisions behind the wheel. We believe that being well prepared for any situation—through good vision, early decision-making, and strong vehicle handling—plays a key role in reducing risks while driving.
