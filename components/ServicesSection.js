@@ -10,7 +10,7 @@ const services = [
   },
   {
     icon: Award,
-    title: "4 Years+ Experienced Driving Instructor",
+    title: "6 Years+ Experienced Driving Instructor",
     description: "Professional instruction from Waseem, who has been teaching since 2018.",
     color: "bg-red-100 text-red-600"
   },
