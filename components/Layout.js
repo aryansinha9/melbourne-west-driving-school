@@ -75,8 +75,8 @@ export default function Layout({ children }) {
                   key={item.title}
                   href={item.url}
                   className={`text-sm font-medium transition-colors ${isActiveLink(item.url)
-                      ? "text-red-600"
-                      : "text-gray-700 hover:text-red-600"
+                    ? "text-red-600"
+                    : "text-gray-700 hover:text-red-600"
                     }`}
                 >
                   {item.title}
@@ -115,8 +115,8 @@ export default function Layout({ children }) {
                   href={item.url}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={`block px-4 py-2 rounded-md text-base font-medium ${isActiveLink(item.url)
-                      ? "bg-red-50 text-red-600"
-                      : "text-gray-700 hover:bg-gray-50"
+                    ? "bg-red-50 text-red-600"
+                    : "text-gray-700 hover:bg-gray-50"
                     }`}
                 >
                   {item.title}
@@ -204,11 +204,11 @@ export default function Layout({ children }) {
           <div className="mt-12 border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
             <p>&copy; {new Date().getFullYear()} Melbourne West Driving School. All Rights Reserved.</p>
           </div>
-          <div className="mt-8 h-48 w-full relative">
+          <div className="mt-8 h-32 w-full relative">
             <ShapeBlur
               variation={0}
               pixelRatioProp={2}
-              shapeSize={1.6}
+              shapeSize={1.2}
               roundness={0.5}
               borderSize={0.25}
               circleSize={0.4}
