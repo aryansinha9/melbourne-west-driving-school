@@ -204,7 +204,12 @@ export default function Layout({ children }) {
           <div className="mt-12 border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
             <p>&copy; {new Date().getFullYear()} Melbourne West Driving School. All Rights Reserved.</p>
           </div>
-          <div className="mt-8 h-32 w-full relative">
+          <a
+            href="https://anantasystems.com.au/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block mt-8 h-32 w-full relative cursor-pointer"
+          >
             <ShapeBlur
               variation={0}
               pixelRatioProp={2}
@@ -215,7 +220,7 @@ export default function Layout({ children }) {
               circleEdge={1.0}
               className="w-full h-full"
             />
-          </div>
+          </a>
         </div>
       </footer>
     </div>
