@@ -11,7 +11,7 @@ const config = [
       ...nextPlugin.configs.recommended.rules,
       ...nextPlugin.configs["core-web-vitals"].rules,
       // This is the important line that allows deployment
-      "react/no-unescaped-entities": "warn", 
+
     },
   },
 ];
