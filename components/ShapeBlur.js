@@ -123,8 +123,8 @@ void main() {
     
     sdf = strokeAA(sdf, 0.0, borderSize, sdfCircle * 0.3) * 4.0;
 
-    // COLOR CHANGE: White (1.0)
-    vec3 color = vec3(1.0);
+    // COLOR CHANGE: #9CA3AF (approx vec3(0.61, 0.64, 0.69))
+    vec3 color = vec3(0.611, 0.639, 0.686);
     
     // TRANSLUCENCY CHANGE: Multiply alpha by 0.3 for 30% opacity
     float alpha = sdf * 0.3;
