@@ -1,5 +1,6 @@
 "use client"; // Required for hooks like useState and useRouter
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import ShapeBlur from './ShapeBlur';
 import Link from 'next/link'; // Use Next.js Link for navigation
 import Image from 'next/image'; // Use Next.js Image for optimization
 import { useRouter } from 'next/router'; // Use Next.js Router to get the current path
@@ -19,17 +20,44 @@ export default function Layout({ children }) {
   // The logic is the same, but we get the path from `router.pathname`
   const isActiveLink = (url) => router.pathname === url;
 
+  // Header scroll behavior
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const controlNavbar = () => {
+      if (typeof window !== 'undefined') {
+        const currentScrollY = window.scrollY;
+
+        // Hide if scrolling down and requested functionality
+        // Show if scrolling up
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+          setIsVisible(false);
+        } else {
+          setIsVisible(true);
+        }
+
+        setLastScrollY(currentScrollY);
+      }
+    };
+
+    window.addEventListener('scroll', controlNavbar);
+    return () => {
+      window.removeEventListener('scroll', controlNavbar);
+    };
+  }, [lastScrollY]);
+
   return (
     <div className="min-h-screen bg-white font-sans">
       {/* Header */}
-      <header className="bg-white/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-100">
+      <header className={`bg-white/80 backdrop-blur-sm fixed w-full top-0 z-50 border-b border-gray-100 transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3">
-              <Image 
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68d13cf9dba1da4cde959c5c/dca4ed10c_GeneratedImageSeptember222025-10_52PM1.png" 
-                alt="Melbourne West Driving School Logo" 
+              <Image
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68d13cf9dba1da4cde959c5c/dca4ed10c_GeneratedImageSeptember222025-10_52PM1.png"
+                alt="Melbourne West Driving School Logo"
                 width={48} // Add width
                 height={48} // Add height
                 className="h-12 w-auto"
@@ -46,11 +74,10 @@ export default function Layout({ children }) {
                 <Link
                   key={item.title}
                   href={item.url}
-                  className={`text-sm font-medium transition-colors ${
-                    isActiveLink(item.url)
+                  className={`text-sm font-medium transition-colors ${isActiveLink(item.url)
                       ? "text-red-600"
                       : "text-gray-700 hover:text-red-600"
-                  }`}
+                    }`}
                 >
                   {item.title}
                 </Link>
@@ -87,11 +114,10 @@ export default function Layout({ children }) {
                   key={item.title}
                   href={item.url}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`block px-4 py-2 rounded-md text-base font-medium ${
-                    isActiveLink(item.url)
+                  className={`block px-4 py-2 rounded-md text-base font-medium ${isActiveLink(item.url)
                       ? "bg-red-50 text-red-600"
                       : "text-gray-700 hover:bg-gray-50"
-                  }`}
+                    }`}
                 >
                   {item.title}
                 </Link>
@@ -111,7 +137,7 @@ export default function Layout({ children }) {
       </header>
 
       {/* Main Content: This is where the page content will be injected */}
-      <main>{children}</main>
+      <main className="pt-20">{children}</main>
 
       {/* Footer */}
       <footer className="bg-black text-white">
@@ -121,8 +147,8 @@ export default function Layout({ children }) {
             <div className="md:col-span-2">
               <div className="flex items-center gap-3 mb-4">
                 <Image
-                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68d13cf9dba1da4cde959c5c/dca4ed10c_GeneratedImageSeptember222025-10_52PM1.png" 
-                  alt="Melbourne West Driving School Logo" 
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68d13cf9dba1da4cde959c5c/dca4ed10c_GeneratedImageSeptember222025-10_52PM1.png"
+                  alt="Melbourne West Driving School Logo"
                   width={48} // Add width
                   height={48} // Add height
                   className="h-12 w-auto"
@@ -165,7 +191,7 @@ export default function Layout({ children }) {
                   <p className="text-gray-400">Languages: English, Hindi, Telugu, Urdu</p>
                 </li>
                 <li className="flex gap-4">
-                   <a href="https://www.facebook.com/meldrivingschool" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-500">
+                  <a href="https://www.facebook.com/meldrivingschool" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-500">
                     <Facebook className="w-6 h-6" />
                   </a>
                   <a href="https://www.instagram.com/melbournewestdrivingschool?utm_source=ig_web_button_share_sheet&igsh=engybnFzenBxYTRk" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-500">
@@ -177,6 +203,18 @@ export default function Layout({ children }) {
           </div>
           <div className="mt-12 border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
             <p>&copy; {new Date().getFullYear()} Melbourne West Driving School. All Rights Reserved.</p>
+          </div>
+          <div className="mt-8 h-48 w-full relative">
+            <ShapeBlur
+              variation={0}
+              pixelRatioProp={2}
+              shapeSize={1.6}
+              roundness={0.5}
+              borderSize={0.25}
+              circleSize={0.4}
+              circleEdge={1.0}
+              className="w-full h-full"
+            />
           </div>
         </div>
       </footer>
