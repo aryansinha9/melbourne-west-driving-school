@@ -3,18 +3,18 @@ import React from 'react';
 import CircularGallery from './CircularGallery';
 
 const successPhotos = [
-  { image: "/images/success-1.jpeg", text: "Success!" },
-  { image: "/images/success-2.jpeg", text: "Success!" },
-  { image: "/images/success-3.jpeg", text: "Success!" },
-  { image: "/images/success-4.jpeg", text: "Success!" },
-  { image: "/images/success-5.jpeg", text: "Success!" },
-  { image: "/images/success-6.jpeg", text: "Success!" },
-  { image: "/images/success-7.jpeg", text: "Success!" },
-  { image: "/images/success-8.jpeg", text: "Success!" },
-  { image: "/images/success-9.jpeg", text: "Success!" },
-  { image: "/images/success-10.jpeg", text: "Success!" },
-  { image: "/images/success-11.jpeg", text: "Success!" },
-  { image: "/images/success-12.jpeg", text: "Success!" }
+  { image: "/images/success-1.jpeg", text: "" },
+  { image: "/images/success-2.jpeg", text: "" },
+  { image: "/images/success-3.jpeg", text: "" },
+  { image: "/images/success-4.jpeg", text: "" },
+  { image: "/images/success-5.jpeg", text: "" },
+  { image: "/images/success-6.jpeg", text: "" },
+  { image: "/images/success-7.jpeg", text: "" },
+  { image: "/images/success-8.jpeg", text: "" },
+  { image: "/images/success-9.jpeg", text: "" },
+  { image: "/images/success-10.jpeg", text: "" },
+  { image: "/images/success-11.jpeg", text: "" },
+  { image: "/images/success-12.jpeg", text: "" }
 ];
 
 const SuccessStoriesSection = () => {
@@ -32,11 +32,11 @@ const SuccessStoriesSection = () => {
         <div style={{ height: '600px', position: 'relative' }}>
           <CircularGallery
             items={successPhotos}
-            bend={3}
+            bend={1}
             textColor="#ffffff"
             borderRadius={0.05}
-            scrollEase={0.05}
-            scrollSpeed={2}
+            scrollEase={0.03}
+            scrollSpeed={1.5}
           />
         </div>
       </div>
