@@ -25,7 +25,7 @@ export default function ContactPage() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
-          access_key: 'YOUR_WEB3FORMS_API_KEY',
+          access_key: 'e35857dc-017e-456a-aafa-73216690d6b1',
           subject: `New Booking Enquiry from ${formData.name}`,
           from_name: 'Melbourne West Driving School Website',
           ...formData,
