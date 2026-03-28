@@ -15,6 +15,7 @@ export default function Layout({ children }) {
     { title: "Home", url: "/" },
     { title: "Prices", url: "/prices" },
     { title: "Reviews", url: "/reviews" },
+    { title: "Contact Us", url: "/contact" },
   ];
 
   // The logic is the same, but we get the path from `router.pathname`
@@ -86,10 +87,9 @@ export default function Layout({ children }) {
                 asChild
                 className="bg-red-600 text-white hover:bg-red-700 rounded-full px-6 py-2.5 text-sm font-semibold shadow-md hover:shadow-lg transition-all"
               >
-                <a href="tel:0430474492">
-                  <Phone className="w-4 h-4 mr-2" />
-                  Call Now
-                </a>
+                <Link href="/contact">
+                  Book Your Lesson
+                </Link>
               </Button>
             </nav>
 
@@ -126,10 +126,9 @@ export default function Layout({ children }) {
                 asChild
                 className="w-full bg-red-600 text-white hover:bg-red-700 rounded-full py-3 text-base font-semibold"
               >
-                <a href="tel:0430474492">
-                  <Phone className="w-4 h-4 mr-2" />
-                  Call Now: 0430 474 492
-                </a>
+                <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
+                  Book Your Lesson
+                </Link>
               </Button>
             </nav>
           </div>

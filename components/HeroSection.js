@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image'; // <-- Use Next.js Image component
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Phone } from 'lucide-react';
 
 const HeroSection = () => (
   <section className="bg-white">
@@ -16,12 +16,10 @@ const HeroSection = () => (
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <Button size="lg" className="bg-red-600 text-white hover:bg-red-700 rounded-full px-8 py-6 text-base font-semibold shadow-lg hover:shadow-xl transition-all">
-              <a href="tel:0430474492">Book Your First Lesson</a>
+              <Link href="/contact">Book Your First Lesson</Link>
             </Button>
-            <Button size="lg" variant="ghost" className="text-gray-800 hover:bg-gray-100 rounded-full px-8 py-6 text-base font-semibold">
-              <a href="tel:0430474492" className="flex items-center">
-                <Phone className="w-5 h-5 mr-2"/> Call Now: 0430 474 492
-              </a>
+            <Button size="lg" variant="outline" className="border-2 border-gray-800 text-gray-800 hover:bg-gray-100 rounded-full px-8 py-6 text-base font-semibold">
+              <Link href="/contact">Book</Link>
             </Button>
           </div>
         </div>

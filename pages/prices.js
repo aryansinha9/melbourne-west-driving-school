@@ -1,7 +1,8 @@
 import React from 'react';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Phone, Car, Award } from 'lucide-react';
+import { Car, Award } from 'lucide-react';
 
 export default function PricesPage() {
   return (
@@ -10,7 +11,7 @@ export default function PricesPage() {
       <section className="bg-gray-50 pt-16 pb-12 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-black">Prices</h1>
-          <div className="w-20 h-1 bg-red-600 mt-3 mx-auto"></div>
+          <div className="w-20 h-1 bg-red-600 mt-3 mx-auto" />
           <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
             Transparent and affordable pricing for top-quality driving instruction. Choose the package that's right for you.
           </p>
@@ -20,18 +21,18 @@ export default function PricesPage() {
       {/* Pricing Content */}
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           {/* 60 Minute Lessons */}
           <div className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-red-600 text-center mb-8">60 Minute Lessons</h2>
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               <Card className="border-2 border-gray-200 rounded-2xl shadow-lg hover:shadow-xl transition-all">
                 <CardContent className="p-8 text-center">
                   <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Car className="w-8 h-8 text-gray-600" />
                   </div>
                   <h3 className="text-xl font-bold text-black mb-2">Single Lesson</h3>
-                  <div className="text-4xl font-bold text-black mb-6">$66</div>
+                  <div className="text-4xl font-bold text-black mb-6">$70</div>
                   <p className="text-gray-600">60 minute lesson</p>
                 </CardContent>
               </Card>
@@ -41,26 +42,54 @@ export default function PricesPage() {
                   <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Car className="w-8 h-8 text-red-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-black mb-2">Package Deal</h3>
-                  <div className="text-4xl font-bold text-red-600 mb-6">$325</div>
-                  <p className="text-gray-600">5 x 60 minute lessons</p>
+                  <h3 className="text-xl font-bold text-black mb-2">5-Lesson Package</h3>
+                  <div className="text-4xl font-bold text-red-600 mb-6">$340</div>
+                  <p className="text-gray-600">5 × 60 minute lessons</p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-red-400 rounded-2xl shadow-lg hover:shadow-xl transition-all bg-red-600">
+                <CardContent className="p-8 text-center">
+                  <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Car className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">10-Lesson Package</h3>
+                  <div className="text-4xl font-bold text-white mb-6">$670</div>
+                  <p className="text-red-100">10 × 60 minute lessons</p>
                 </CardContent>
               </Card>
             </div>
           </div>
 
-          {/* Test Rates */}
+          {/* 90 Minute Lessons */}
           <div className="mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-red-600 text-center mb-8">Test Rates</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-red-600 text-center mb-8">90 Minute Lessons</h2>
+            <div className="grid md:grid-cols-1 gap-8 max-w-xs mx-auto">
+              <Card className="border-2 border-gray-200 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+                <CardContent className="p-8 text-center">
+                  <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Car className="w-8 h-8 text-gray-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-black mb-2">Single Lesson</h3>
+                  <div className="text-4xl font-bold text-black mb-6">$100</div>
+                  <p className="text-gray-600">90 minute lesson</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Lesson + Test Packages */}
+          <div className="mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-red-600 text-center mb-8">Lesson + Test Packages</h2>
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               <Card className="border-2 border-gray-200 rounded-2xl shadow-lg hover:shadow-xl transition-all">
                 <CardContent className="p-8 text-center">
                   <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Award className="w-8 h-8 text-gray-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-black mb-2">Driving Test</h3>
-                  <div className="text-4xl font-bold text-black mb-6">$169</div>
-                  <p className="text-gray-600">Driving test</p>
+                  <h3 className="text-xl font-bold text-black mb-2">60 min Lesson + Test</h3>
+                  <div className="text-4xl font-bold text-black mb-6">$210</div>
+                  <p className="text-gray-600">60 min lesson + driving test</p>
                 </CardContent>
               </Card>
 
@@ -69,9 +98,9 @@ export default function PricesPage() {
                   <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Award className="w-8 h-8 text-red-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-black mb-2">Lesson + Test</h3>
-                  <div className="text-4xl font-bold text-red-600 mb-6">$210</div>
-                  <p className="text-gray-600">60 mins lesson + driving test</p>
+                  <h3 className="text-xl font-bold text-black mb-2">90 min Lesson + Test</h3>
+                  <div className="text-4xl font-bold text-red-600 mb-6">$240</div>
+                  <p className="text-gray-600">90 min lesson + driving test</p>
                 </CardContent>
               </Card>
             </div>
@@ -89,9 +118,7 @@ export default function PricesPage() {
               </a>
             </div>
             <Button size="lg" className="bg-red-600 text-white hover:bg-red-700 rounded-full px-8 py-6 text-lg font-semibold shadow-lg">
-              <a href="tel:0430474492" className="flex items-center">
-                <Phone className="w-5 h-5 mr-2"/> Call Now
-              </a>
+              <Link href="/contact">Book Your Lesson</Link>
             </Button>
           </div>
         </div>
@@ -120,7 +147,7 @@ export default function PricesPage() {
             </li>
             <li className="flex items-start">
               <span className="font-bold text-red-600 mr-3 text-lg">•</span>
-              <span>We cover Drive test in Werribee & Deerpark</span>
+              <span>We cover Drive test in Werribee &amp; Deerpark</span>
             </li>
             <li className="flex items-start">
               <span className="font-bold text-red-600 mr-3 text-lg">•</span>
